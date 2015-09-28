@@ -1,0 +1,523 @@
+<div class="container">
+
+  <div>
+    <acme-navbar creationDate="main.creationDate" />
+  </div>
+
+    <div class="row contact-header">
+        <div class="col-md-6">
+            <h2>Create New Contact</h2>
+        </div>
+        <div class="col-lg-6 text-right">
+            <button class="btn btn-default">Cancel</button>
+            <button class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+
+    <div class="container-fluid contact-content">
+        <div class="row name-full">
+
+            <div class="col-md-10">
+				<div class="row">
+					<div class="col-md-3">
+						<input type="text" class="form-control" placeholder="First Name" />
+					</div>
+					<div class="col-md-3">
+						<input type="text" class="form-control" placeholder="Middle Name" />
+					</div>
+					<div class="col-md-3">
+						<input type="text" class="form-control" placeholder="Last Name" />
+					</div>
+					<div class="col-md-3">
+						<input type="text" class="form-control" placeholder="Nick Name" />
+					</div>
+				</div>
+			</div>
+            <div class="col-md-2">
+				<select class="form-control">
+					<option value="">Suffix</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+            </div>
+        </div>
+
+
+
+		<div class="row">
+			<div class="col-md-2">
+				<div class="form-group">
+					<label>Favorite:</label>
+					<input type="text" class="form-control" placeholder="favorite" />
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Date of Birth:</label>
+							<p class="input-group">
+								<span class="input-group-btn">
+									<button type="button" class="btn btn-default" ng-click="vm.open($event, 'opened1')"><i class="glyphicon glyphicon-calendar"></i></button>
+								</span>
+								<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt1" is-open="vm.dobStatus.isopen" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Contact Type:</label>
+							<div class="input-group">
+								<div class="input-group-btn" dropdown>
+									<button type="button" class="btn btn-default" dropdown-toggle>
+										Select <span class="caret"></span>
+										<span class="sr-only">Split button!</span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+										<li role="menuitem"><a href="#">Action</a></li>
+										<li role="menuitem"><a href="#">Another action</a></li>
+										<li role="menuitem"><a href="#">Something else here</a></li>
+										<li class="divider"></li>
+										<li role="menuitem"><a href="#">Separated link</a></li>
+									</ul>
+								</div><!-- /btn-group -->
+								<input type="text" class="form-control" aria-label="...">
+							</div><!-- /input-group -->
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Source:</label>
+							<div class="input-group">
+								<div class="input-group-btn" dropdown>
+									<button type="button" class="btn btn-default" dropdown-toggle>
+										Select <span class="caret"></span>
+										<span class="sr-only">Split button!</span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+										<li role="menuitem"><a href="#">Action</a></li>
+										<li role="menuitem"><a href="#">Another action</a></li>
+										<li role="menuitem"><a href="#">Something else here</a></li>
+										<li class="divider"></li>
+										<li role="menuitem"><a href="#">Separated link</a></li>
+									</ul>
+								</div><!-- /btn-group -->
+								<input type="text" class="form-control" aria-label="...">
+							</div><!-- /input-group -->
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Preferred Contact Method:</label>
+							<div class="input-group">
+								<div class="input-group-btn" dropdown>
+									<button type="button" class="btn btn-default" dropdown-toggle>
+										Select <span class="caret"></span>
+										<span class="sr-only">Split button!</span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+										<li role="menuitem"><a href="#">Action</a></li>
+										<li role="menuitem"><a href="#">Another action</a></li>
+										<li role="menuitem"><a href="#">Something else here</a></li>
+										<li class="divider"></li>
+										<li role="menuitem"><a href="#">Separated link</a></li>
+									</ul>
+								</div><!-- /btn-group -->
+								<input type="text" class="form-control" aria-label="...">
+							</div><!-- /input-group -->
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Assigned To:</label>
+							<input type="text"class="form-control" />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Referred By:</label>
+							<input type="text" class="form-control" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Gender</label>
+									<div class="input-group">
+									<div class="input-group-btn" dropdown>
+										<button type="button" class="btn btn-default" dropdown-toggle>
+											Select <span class="caret"></span>
+											<span class="sr-only">Split button!</span>
+										</button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+											<li role="menuitem"><a href="#">Action</a></li>
+											<li role="menuitem"><a href="#">Another action</a></li>
+											<li role="menuitem"><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li role="menuitem"><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<input type="text" class="form-control" aria-label="...">
+								</div><!-- /input-group -->
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Marital Status</label>
+									<div class="input-group">
+									<div class="input-group-btn" dropdown>
+										<button type="button" class="btn btn-default" dropdown-toggle>
+											Select <span class="caret"></span>
+											<span class="sr-only">Split button!</span>
+										</button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+											<li role="menuitem"><a href="#">Action</a></li>
+											<li role="menuitem"><a href="#">Another action</a></li>
+											<li role="menuitem"><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li role="menuitem"><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<input type="text" class="form-control" aria-label="...">
+								</div><!-- /input-group -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Anniversary</label>
+									<p class="input-group">
+									<span class="input-group-btn">
+										<button type="button" class="btn btn-default" ng-click="vm.open($event,'opened2')"><i class="glyphicon glyphicon-calendar"></i></button>
+									</span>
+									<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt2" is-open="vm.status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+								</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<div class="input-group">
+									<div class="input-group-btn" dropdown>
+										<button type="button" class="btn btn-default" dropdown-toggle>
+											Select <span class="caret"></span>
+											<span class="sr-only">Split button!</span>
+										</button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+											<li role="menuitem"><a href="#">Action</a></li>
+											<li role="menuitem"><a href="#">Another action</a></li>
+											<li role="menuitem"><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li role="menuitem"><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<input type="text" class="form-control" aria-label="...">
+								</div><!-- /input-group -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Campaign</label>
+							<input type="text" class="form-control" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<tabset>
+					<tab class="col-md-2 text-center" heading="Details">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-offset-1">
+										<h3>Contact Information</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<!--div.form-horizontal>div.form-group>div.col-md-offset-2.col-md-1+label.control-label.col-md-3+div.col-md-6>input.form-control-->
+								<div class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-offset-2 col-md-1">
+											<switch id="phone" name="phone" ng-model="contactPhoneHomeEnabled" class="green"></switch>
+										</div>
+										<label class="control-label col-md-3">Home Phone</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" ng-disabled="contactPhoneHomeEnabled" />
+										</div>
+									</div>
+								</div>
+
+								<div class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-offset-2 col-md-1">
+											<switch id="mobile" name="mobile" ng-model="contactMobileEnabled" class="green"></switch>
+										</div>
+										<label for="" class="control-label col-md-3">Mobile Phone</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" ng-disabled="contactMobileEnabled" />
+										</div>
+									</div>
+								</div>
+
+								<div class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-offset-2 col-md-1">
+											<switch id="work" name="work" ng-model="contactWorkEnabled" class="green"></switch>
+										</div>
+										<label for="" class="control-label col-md-3">Work Phone</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" ng-disabled="contactWorkEnabled" />
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<!--div.form-horizontal>div.form-group>div.col-md-offset-1.col-md-1+label.control-label.col-md-2+div.col-md-6>input.form-control-->
+								<div class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-offset-1 col-md-1">
+											<switch id="fax" name="fax" ng-model="contactFaxEnabled" class="green"></switch>
+										</div>
+										<label for="" class="control-label col-md-2">Fax</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" ng-disabled="contactFaxEnabled" />
+										</div>
+									</div>
+								</div>
+
+								<div class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-offset-1 col-md-1">
+											<switch id="email" name="email" ng-model="contactEmailEnabled" class="green"></switch>
+										</div>
+										<label for="" class="control-label col-md-2">Email</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" ng-disabled="contactEmailEnabled" />
+										</div>
+									</div>
+								</div>
+
+								<div class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-offset-1 col-md-1"></div>
+										<label for="" class="control-label col-md-2">Greeting</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" placeholder="moshi moshi" />
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="row">
+							<div class="col-md-offset-1 col-md-10">
+								<p>Additional Information:</p>
+								<textarea class="form-control"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-offset-1">
+										<h3>Social Media</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-offset-1 col-md-10">
+								<div class="col-md-3">
+									<div class="input-group">
+										<span class="input-group-addon social twitter"><i class="fa fa-linkedin"></i></span>
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="input-group">
+										<span class="input-group-addon social facebook"><i class="fa fa-facebook"></i></span>
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="input-group">
+										<span class="input-group-addon social twitter"><i class="fa fa-twitter"></i></span>
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="input-group">
+										<span class="input-group-addon social twitter">$</span>
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-offset-1">
+										<h3>Address</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-offset-2">Primary Address</div>
+								</div>
+								<div class="form-horizontal">
+									<div class="form-group">
+										<label for="" class="control-label col-md-4">Formal Name:</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+								</div>
+								<div class="form-horizontal">
+									<div class="form-group">
+										<label for="" class="control-label col-md-4">Address 1:</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+								</div>
+								<div class="form-horizontal">
+									<div class="form-group">
+										<label for="" class="control-label col-md-4">Address 2:</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+								</div>
+								<div class="form-horizontal">
+									<div class="form-group">
+										<label for="" class="control-label col-md-4">Zip:</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+								</div>
+								<div class="form-horizontal">
+									<div class="form-group">
+										<label for="" class="control-label col-md-4">City:</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-9">
+										<fieldset>
+											<legend>Mailing Address <switch id="address-mailing" name="address-mailing" ng-model="addressMailingEnabled" class="green"></switch> </legend>
+											Same As Primary
+											<div class="form-horizontal">
+												<div class="form-group">
+													<label for="" class="control-label col-md-4">Address 1:</label>
+													<div class="col-md-8">
+														<input type="text" class="form-control" />
+													</div>
+												</div>
+											</div>
+											<div class="form-horizontal">
+												<div class="form-group">
+													<label for="" class="control-label col-md-4">Address 2:</label>
+													<div class="col-md-8">
+														<input type="text" class="form-control" />
+													</div>
+												</div>
+											</div>
+											<div class="form-horizontal">
+												<div class="form-group">
+													<label for="" class="control-label col-md-4">Zip:</label>
+													<div class="col-md-8">
+														<input type="text" class="form-control" />
+													</div>
+												</div>
+											</div>
+											<div class="form-horizontal">
+												<div class="form-group">
+													<label for="" class="control-label col-md-4">City:</label>
+													<div class="col-md-8">
+														<input type="text" class="form-control" />
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-offset-1">
+										<h3>Employment Information</h3>
+										<span class="label label-default"><i class="fa fa-link"></i> Remove Company</span>
+										<span class="label label-primary"><i class="fa fa-link"></i> Add to Company</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-offset-1">
+										<h3>Personal Information</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-offset-1 col-md-10">
+								<div class="form-group">
+									<label>Hobbies</label>
+									<textarea class="form-control" placeholder="Enter personal information about hobbies here&hellip;"></textarea>
+								</div>
+							</div>
+							<div class="col-md-offset-1 col-md-10">
+								<div class="form-group">
+									<label>Children</label>
+									<textarea class="form-control" placeholder="Enter personal information about children here&hellip;"></textarea>
+								</div>
+							</div>
+						</div>
+					</tab>
+				</tabset>
+			</div>
+		</div>
+
+    </div>
+
+
+	<div class="contact-footer">
+		<div class="col-md-12 text-right">
+			<button class="btn btn-default">Cancel</button>
+			<button class="btn btn-primary">Save changes</button>
+		</div>
+	</div>
+
+</div>

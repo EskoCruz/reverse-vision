@@ -11,10 +11,20 @@
 		box-shadow: $top $left $blur $spread $color;
 	}
 }
+/*// border radius */
+@mixin border-radius ($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
 
 /*//Bootstrap overwrite */
+.caret {
+	border-top: 4px dashed;
+}
 .form-control {
-
+	@include border-radius(0);
 	&:focus {
 		border-color: #64BD63;
 		outline: 0;
@@ -61,7 +71,7 @@ body {
 			legend {
 				width:inherit; /* Or auto */
 				padding:0 10px; /* To give a bit of padding on the left and right */
-				border-bottom:none;
+				border-bottom: none;
 			}
 		}
 

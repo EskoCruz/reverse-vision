@@ -407,7 +407,9 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="row">
-									<div class="col-md-offset-2">Primary Address</div>
+									<div class="col-md-offset-3">
+										<h4>Primary Address</h4>
+									</div>
 								</div>
 								<div class="form-horizontal">
 									<div class="form-group">
@@ -455,7 +457,15 @@
 									<div class="col-md-9">
 										<fieldset>
 											<legend><label class="control-label">Mailing Address</label> <switch id="address-mailing" name="address-mailing" ng-model="addressMailingEnabled" class="green"></switch> </legend>
-											Same As Primary
+
+											<div class="form-horizontal">
+												<div class="form-group">
+													<div class="col-md-2 text-right">
+														<input type="checkbox">
+													</div>
+													<label class="col-md-10">Same as primary</label>
+												</div>
+											</div>
 											<div class="form-horizontal">
 												<div class="form-group">
 													<label for="" class="control-label col-md-4">Address 1:</label>

@@ -13,6 +13,13 @@ $fa-font-path: "../../bower_components/font-awesome/fonts";
 // bower:scss
 // endbower
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+}
+p, span, div, label, input, textarea {
+	font-family: 'Open Sans', sans-serif;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;

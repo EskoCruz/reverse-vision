@@ -20,10 +20,14 @@
             <div class="col-md-10">
 				<div class="row">
 					<div class="col-md-3">
-						<input type="text" class="form-control" placeholder="First Name" />
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="First Name" />
+						</div>
 					</div>
 					<div class="col-md-3">
-						<input type="text" class="form-control" placeholder="Middle Name" />
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Middle Name" />
+						</div>
 					</div>
 					<div class="col-md-3">
 						<input type="text" class="form-control" placeholder="Last Name" />
@@ -49,8 +53,24 @@
 		<div class="row">
 			<div class="col-md-2">
 				<div class="form-group">
-					<label>Favorite:</label>
-					<input type="text" class="form-control" placeholder="favorite" />
+					<label class="control-label">Favorite:</label>
+
+					<div class="favorite" role="group" aria-label="...">
+						<button type="button" class="btn btn-star col-md-4" aria-label="Star">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-star fa-stack-1x"></i>
+								<i class="fa fa-star-o fa-stack-1x"></i>
+							</span>
+						</button>
+						<button type="button" class="btn btn-fav col-md-8">Favorite</button>
+						<div class="upload-holder col-md-12">
+							<i class="fa fa-sign-in"></i><br>
+							<p><em><strong>Drag Photo</strong> to upload</em></p>
+						</div>
+						<div class="text-center"><p><em><strong>or Browse</strong></em></p></div>
+					</div>
+
+
 				</div>
 			</div>
 			<div class="col-md-10">
@@ -151,21 +171,21 @@
 								<div class="form-group">
 									<label>Gender</label>
 									<div class="input-group">
-									<div class="input-group-btn" dropdown>
-										<button type="button" class="btn btn-default" dropdown-toggle>
-											Select <span class="caret"></span>
-											<span class="sr-only">Split button!</span>
-										</button>
-										<ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
-											<li role="menuitem"><a href="#">Action</a></li>
-											<li role="menuitem"><a href="#">Another action</a></li>
-											<li role="menuitem"><a href="#">Something else here</a></li>
-											<li class="divider"></li>
-											<li role="menuitem"><a href="#">Separated link</a></li>
-										</ul>
-									</div><!-- /btn-group -->
-									<input type="text" class="form-control" aria-label="...">
-								</div><!-- /input-group -->
+										<div class="input-group-btn" dropdown>
+											<button type="button" class="btn btn-default" dropdown-toggle>
+												Select <span class="caret"></span>
+												<span class="sr-only">Split button!</span>
+											</button>
+											<ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+												<li role="menuitem"><a href="#">Action</a></li>
+												<li role="menuitem"><a href="#">Another action</a></li>
+												<li role="menuitem"><a href="#">Something else here</a></li>
+												<li class="divider"></li>
+												<li role="menuitem"><a href="#">Separated link</a></li>
+											</ul>
+										</div><!-- /btn-group -->
+										<input type="text" class="form-control" aria-label="...">
+									</div><!-- /input-group -->
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -197,11 +217,11 @@
 								<div class="form-group">
 									<label>Anniversary</label>
 									<p class="input-group">
-									<span class="input-group-btn">
-										<button type="button" class="btn btn-default" ng-click="vm.open($event,'opened2')"><i class="glyphicon glyphicon-calendar"></i></button>
-									</span>
-									<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt2" is-open="vm.status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-								</p>
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-default" ng-click="vm.open($event,'opened2')"><i class="glyphicon glyphicon-calendar"></i></button>
+										</span>
+										<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt2" is-open="vm.status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+									</p>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -238,7 +258,7 @@
 		</div>
 
 
-		<div class="row">
+		<div id="details" class="row">
 			<div class="col-md-12">
 				<tabset>
 					<tab class="col-md-2 text-center" heading="Details">
@@ -434,7 +454,7 @@
 								<div class="row">
 									<div class="col-md-9">
 										<fieldset>
-											<legend>Mailing Address <switch id="address-mailing" name="address-mailing" ng-model="addressMailingEnabled" class="green"></switch> </legend>
+											<legend><label class="control-label">Mailing Address</label> <switch id="address-mailing" name="address-mailing" ng-model="addressMailingEnabled" class="green"></switch> </legend>
 											Same As Primary
 											<div class="form-horizontal">
 												<div class="form-group">

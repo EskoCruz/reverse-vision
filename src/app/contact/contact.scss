@@ -134,6 +134,8 @@ body {
 				@include border-radius(0);
 				border: 1px solid #CCCCCC;
 				color: #FFFFFF;
+				width: 40px;
+				text-align: center;
 				&.linkedin {
 					background-color: #1285c4;
 				}

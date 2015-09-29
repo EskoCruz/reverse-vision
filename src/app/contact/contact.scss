@@ -23,6 +23,7 @@
 .caret {
 	border-top: 4px dashed;
 }
+
 .form-control {
 	@include border-radius(0);
 	&:focus {
@@ -51,6 +52,9 @@ body {
 			textarea {
 				resize: none;
 			}
+			.btn {
+				height: 34px;
+			}
 			&.name-full {
 				margin-top: 20px;
 				margin-bottom: 10px;
@@ -59,6 +63,29 @@ body {
 						@include box-shadow(1px, 1px, 2px, 0, #CCCCCC, true);
 					}
 				}
+			}
+		}
+
+		#social-media {
+			.social {
+				@include border-radius(0);
+				border: 1px solid #CCCCCC;
+				color: #FFFFFF;
+				&.linkedin {
+					background-color: #1285c4;
+				}
+				&.facebook {
+					background-color: #3a5999;
+				}
+				&.twitter {
+					background-color: #02baf6;
+				}
+				&.www {
+					background-color: #e94c3d;
+				}
+			}
+			.form-control {
+				margin-left: 2px;
 			}
 		}
 

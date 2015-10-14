@@ -22,6 +22,7 @@
 		//vm.items = items;
 		//vm.toggled = toggled;
 		//vm.toggleDropdown = toggleDropdown;
+		//vm.age = age;
 
 		activate();
 

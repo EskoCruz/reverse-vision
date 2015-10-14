@@ -19,6 +19,7 @@
 	border-radius: $radius;
 }
 /*// background linear gradient - top to bottom */
+/* top | bottom */
 @mixin background-grad($top, $bottom) {
 	background: -webkit-linear-gradient($top, $bottom); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient($top, $bottom); /* For Opera 11.1 to 12.0 */

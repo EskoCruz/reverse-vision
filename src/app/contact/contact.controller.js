@@ -17,12 +17,6 @@
 		var vm = this;
 
 		vm.activate = activate;
-		//vm.open = open;
-		//vm.status = status;
-		//vm.items = items;
-		//vm.toggled = toggled;
-		//vm.toggleDropdown = toggleDropdown;
-		//vm.age = age;
 
 		activate();
 
@@ -31,10 +25,20 @@
 		function activate() {
 		}
 
+		function age(first, second) {
+			if(second && first){
+				return (second-first)/(1000*60*60*24*365);
+			}
+			else
+			{
+				return 0;
+			}
+		}
+
 		vm.open = function($event, opened) {
-			if (opened == 'opened2') {
+			if (opened === 'opened2') {
 				vm.status.opened = true;
-			} else if(opened == 'opened1') {
+			} else if(opened === 'opened1') {
 				vm.dobStatus.isopen = true;
 			}
 		};
@@ -67,7 +71,6 @@
 			vm.status.opened = !vm.status.opened;
 			vm.dobStatus.isopen = !vm.dobStatus.isopen;
 		};
-
 
 	}
 
